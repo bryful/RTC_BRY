@@ -1,6 +1,6 @@
 # RTC_BRY
 
-久しぶりに「ダンジョンマスター」をやりたくなって[Dungeon Master - Return To Chaos](http://ragingmole.com/RTC/)からクローンゲームをDLしてみましたが、さすがに絵が古いのでやる気が出なかったので、ChatGPTの画像作成機能使ってtekitounitukutte
+久しぶりに「ダンジョンマスター」をやりたくなって[Dungeon Master - Return To Chaos](http://ragingmole.com/RTC/)からクローンゲームをDLしてみましたが、さすがに絵が古いのでやる気が出なかったので、ChatGPTの画像作成機能使って適当に作って
 差し替えてみました。<br>
 <br>
 チャンピョン達は女性のみ。男性は面倒だったのでデフォルトのまま。<br>
