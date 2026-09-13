@@ -1,0 +1,177 @@
+; Return To Chaos
+; (c)2008 George Gilbert
+;
+; Primary configuration file.
+;
+; IMPORTANT - THIS IS A TAB DELIMITED FILE; BE CAREFUL HOW YOU EDIT IT.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Game set up                                                                       ;
+;                                                                                   ;
+; SCREEN_MODE    - Screen mode to use                                               ;
+; SCREENSHOTS    - Save just the game area (NORMAL) or include borders too (ALL)    ;
+; KEY_           - Define the keys for movement and spell casting                   ;
+;                                                                                   ;
+; The screen mode must either be set to AUTO or a valid, x-delimited, screen mode   ;
+; (for example 640x480x24).                                                         ;
+;                                                                                   ;
+; The keys for RTC are defined as follows:                                          ;
+; - Step Forward:     KEY_STEP_FORWARD  or Up Arrow                                 ;
+; - Step Backward:    KEY_STEP_BACKWARD or Down Arrow                               ;
+; - Turn Left:        KEY_TURN_LEFT     or Left Arrow                               ;
+; - Turn Right:       KEY_TURN_RIGHT    or Right Arrow                              ;
+; - Step Left:        KEY_STEP_LEFT                                                 ;
+; - Step Right:       KEY_STEP_RIGHT                                                ;
+; - Cycle Character:  KEY_VIEW_CYCLE                                                ;
+; - Change Character: KEY_VIEW_CHARn                                                ;
+; - Change Caster:    KEY_RUNE_CHARn                                                ;
+; - Cast Rune:        KEY_RUNE_n                                                    ;
+; - Delete Rune:      KEY_RUNE_DELETE                                               ;
+; - Cast Spell:       KEY_RUNE_CAST                                                 ;
+; - Pause Game:       ESCAPE                                                        ;
+; - Save Game:        CTRL+S                                                        ;
+; - Quit Game:        CTRL+Q                                                        ;
+; - Save screenshot:  CTRL+P                                                        ;
+; - Toggle Recording: CTRL+R                                                        ;
+;                                                                                   ;
+; Allowed values for keys are as follows:                                           ;
+; - A to Z                                                                          ;
+; - 0 to 9                                                                          ;
+; - F1 to F12                                                                       ;
+; - NUMPAD0 to NUMPAD9                                                              ;
+; - INSERT, HOME, END, PAGEUP, PAGEDOWN, DELETE, BACKSPACE, RETURN, TAB, SPACEBAR   ;
+; - ,./;'#[]-=\`                                                                    ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+SCREEN_MODE		640x480x24
+SCREENSHOTS		NORMAL
+FULLSCREEN		OFF
+
+KEY_STEP_FORWARD	S
+KEY_STEP_BACKWARD	X
+KEY_TURN_LEFT		A
+KEY_TURN_RIGHT		D
+KEY_STEP_LEFT		Z
+KEY_STEP_RIGHT		C
+
+KEY_VIEW_CYCLE		Q
+KEY_VIEW_CHAR_1		F1
+KEY_VIEW_CHAR_2		F2
+KEY_VIEW_CHAR_3		F3
+KEY_VIEW_CHAR_4		F4
+
+KEY_RUNE_CHAR_1		F5
+KEY_RUNE_CHAR_2		F6
+KEY_RUNE_CHAR_3		F7
+KEY_RUNE_CHAR_4		F8
+KEY_RUNE_1		1
+KEY_RUNE_2		2
+KEY_RUNE_3		3
+KEY_RUNE_4		4
+KEY_RUNE_5		5
+KEY_RUNE_6		6
+KEY_RUNE_DELETE		BACKSPACE
+KEY_RUNE_CAST		RETURN
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Additional features                                                               ;
+;                                                                                   ;
+; DIFFICULTY     - difficulty rating (0 to 15)                                      ;
+; EXTRA_MONSTERS - the number of extra monsters, per existing one, to add           ;
+;                                                                                   ;
+; N.B. The game mechanics (damage done/taken, food depreciation rate etc) will be   ;
+; scaled if you import characters which are too strong for the dungeon as it was    ;
+; originally designed.                                                              ;
+; On top of this you may increase the difficulty still further; Level 0 is normal,  ;
+; Level 5 will provide a good challenge for the seasoned player, Level 15 is nigh   ;
+; on impossible without Archmaster characters in every skill...                     ;
+;                                                                                   ;
+; An extra monster setting of 1 will double the number of monsters; 2 will treble   ;
+; them etc etc.                                                                     ;
+;                                                                                   ;
+; The difficulty scaling and additional monsters will only applied when you first   ;
+; enter the dungeon, it is ignored if you resume a saved game.                      ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DIFFICULTY	0
+EXTRA_MONSTERS	0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Recording playback                                                                ;
+;                                                                                   ;
+; PLAYBACK - filename                                                               ;
+;                                                                                   ;
+; N.B. Recordings of games are made by pressing CTRL+R during a game.  You can then ;
+; play these back to view your game (or games played by other people) by enabling   ;
+; the PLAYBACK option in this file (make sure the ';' is removed from the start of  ;
+; the line) and specifying the name of file to view.                                ;
+;                                                                                   ;
+; During playback, press ESCAPE to pause or 'Q' to quit.  At the end of playback    ;
+; normal gameplay resumes.                                                          ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;PLAYBACK	RTCRecording_0000.rec
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Performance options                                                               ;
+;                                                                                   ;
+; CACHE           - Cache graphics (YES or NO)                                      ;
+; ANTI_ALIAS      - Anti-alias scaling of the graphics (YES or NO)                  ;
+; SCALE_CLOUDS    - Smoothly scale cloud size according to its power (YES or NO)    ;
+;                                                                                   ;
+; N.B. Caching only recommended for 64MB+ machines                                  ;
+; Switching anti-alias on without using the graphics cache kills the frame rate!    ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CACHE		YES
+ANTI_ALIAS	YES
+SCALE_CLOUDS	NO
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Sound                                                                             ;
+;                                                                                   ;
+; SOUND_LEVEL     - Volume for sound effects (0 to 7)                               ;
+; MUSIC_LEVEL     - Volume for background music (0 to 7)                            ;
+; FOOTSTEPS       - Play monster foot(?)steps (YES or NO)                           ;
+;                                                                                   ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+SOUND_LEVEL	7
+MUSIC_LEVEL	5
+FOOTSTEPS	YES
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Aesthetics                                                                        ;
+;                                                                                   ;
+; LOW_RESOLUTION  - Use low resolution graphics like DM (YES) or best possible (NO) ;
+; TRANSPARENCY    - Alpha blend transparancy for some objects (YES or NO)           ;
+; STEPLIGHTING    - Change lighting in descrete steps like DM (YES) or smoothly (NO);
+; SLOW_WAKING     - Change lighting as eyes adjust after sleeping (YES or NO)       ;
+; FIREBALL_LIGHT  - Fireballs and explosions light up the local area (YES or NO)    ;
+; FLIGHT_ARC      - Objects travel along a parabolic flight path (YES or NO)        ;
+; SCALE_PORTRAITS - View character portraits from a distance (YES or NO)            ;
+; POINTER         - Mouse pointer style (PC, ST or AMIGA)                           ;
+;                                                                                   ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+LOW_RESOLUTION	NO
+TRANSPARENCY	YES
+STEPLIGHTING	NO
+SLOW_WAKING	NO
+FIREBALL_LIGHT	YES
+FLIGHT_ARC	YES
+SCALE_PORTRAITS	YES
+POINTER		AMIGA
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Diagnostic Tests                                                                  ;
+;                                                                                   ;
+; BOOTTEXT        - display progress through the boot-up sequence (YES or NO)       ;
+; FRAMERATE       - display the fps when drawing the dungeon (YES or NO)            ;
+;                                                                                   ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+BOOTTEXT	YES
+FRAMERATE	NO
+
+;COMPILE		Modules\DM_Original2.txt
